@@ -7,7 +7,9 @@ const Round = require('../src/Round');
 
 describe(`Round Class`, function() {
   it(`should be a function`, function() {
-    expect(Round).to.equal('function');
+
+    expect(Round).to.be.a('function');
+
   });
 
   it(`should be an instance of an object`, function() {
@@ -41,7 +43,9 @@ describe(`Round Class`, function() {
 
     const round = new Round(deck);
   
-    expect(round.takeTurn('sea otter')).to.be.equal('correct!'); // => 'correct!'     
+    const output = round.takeTurn('sea otter');
+    
+    expect(output).to.be.equal('correct!'); // => 'correct!'     
     
   });
 
