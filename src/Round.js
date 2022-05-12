@@ -10,11 +10,11 @@ class Round {
   }
 
   calculatePercentCorrect() {
-    return ((this.correct / this.turns)*100).toFixed(0);
+    return parseInt(((this.correct / this.turns)*100).toFixed(0));
   }
 
   endRound() {
-    console.log(`** Round over! ** You answered ${calculatePercentCorrect()} % of the questions correctly!`);
+    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
 
   returnCurrentCard() {
