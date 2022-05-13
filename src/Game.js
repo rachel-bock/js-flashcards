@@ -6,7 +6,7 @@ const util = require('./util');
 
 class Game {
   constructor() {
-    this.currentRound = 1; //keeps track of current round.
+    this.currentRound = 1; // keeps track of current round.
   }
 
   printMessage(deck, round) {
@@ -19,6 +19,7 @@ class Game {
   }
 
   start() {
+    
     // creates Cards.
     const theCards = []
 
@@ -28,11 +29,16 @@ class Game {
 
     // Puts Cards in a Deck.
     const deck = new Deck(theCards);
+    
     // Creates a new Round using the Deck.
     const round = new Round(deck);
-    // invokes printMessage to display the message in the CLI.
+    
+    // start game timer.
+    this.stopwatch = Date.now();
 
+    // invokes printMessage to display the message in the CLI.
     this.printMessage(deck, round);
+
     // invokes printQuestion to kick off our helper functions that allow interaction via the CLI.
     this.printQuestion(round);
   }
