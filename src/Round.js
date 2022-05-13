@@ -7,6 +7,8 @@ class Round {
     this.correct = 0; // count of correct answers.
     this.currentCard = 0; // index of card in deck.
     this.incorrectGuesses = []; // array of id's of incorrect answers.
+    this.start = Date.now();  // store beginning time in milliseconds.  There are 1,000 milliseconds in a second.
+    this.stop = 0;  // store ending time.
   }
 
   calculatePercentCorrect() {
@@ -14,7 +16,20 @@ class Round {
   }
 
   endRound() {
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
+
+    this.stop = Date.now();     // Get current time.
+
+    time = this.stop - this.start; //time is the number of milliseconds elapse during the game.  
+
+    seconds = Math.floor(time / 1000);
+    minutes = Math.floor(time / 60000);
+
     console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+
+    console.log(`** Game  over! ** You completed the game in ${minutes} minutes and ${seconds} seconds.`);
   }
 
   returnCurrentCard() {
