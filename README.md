@@ -1,71 +1,50 @@
-# FlashCards Starter Kit
+# Flashcards Project
 
-## Fork This Repo
-
-On the top right corner of this page, click the **Fork** button.
-
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Your project is running...
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+A terminal based project that includes flashcards to quiz the player on technical content.
 
 
-## Where to Add Your Code
+## Contributors
 
-### JavaScript
+[Rachel Bock](https://www.linkedin.com/in/rachelbock)
 
-**Create all of your feature code files in the `src` directory.**
+## Screenshots
 
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
+In the original project repo, there was this video of the program.  
 
 ![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
 
----
+The project specifications can be found at [Turing's website](https://frontend.turing.edu/projects/flash-cards.html).
 
-## Test Files Organization
+## Technologies Used
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
+This project has been built using vanilla ***JavaScript*** with Test Driven Development (TDD).
 
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
+## Features
 
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
+* Timer functionality - At the end of the game, how much time it took to complete the game (in minutes and seconds) is reported
+* Tracks answers that were incorrect
+* Compares the flashcard's actual answer to the player's answer to determine if the answer is correct or incorrect
+* Reports back to the player whether or not the answer was correct
 
 
+## Install and Setup Instructions
+
+To use the application, clone the repository from GitHub.  Once you have cloned the repo, change into that directory and install the library dependencies by running `npm install` in the terminal.
+
+Once the installation of the dependencies is completed, simply enter `node index.js` in the terminal to start the program.
+
+When the program starts, you'll see a Welcome message in the terminal followed by the first question and answer options.
+
+To run the tests for this application, use the `npm test` command.  The test results will output to the terminal.
+
+## Potential Future Features or Additions
+
+The following abilities and features may be potentially added in the future.
+
+* Choose from more than one deck of cards to use
+* Give the player correct answers when the incorrect one was selected
+* Review questions with incorrect answers
+* Redo the questions that were answered incorrectly
+* Redo the round with the same deck if less than 90% of the answers were correct
+* Count how many tries it takes to get the answer incorrect
+* Having multiple rounds with multiple datasets for more practice on other topics
